@@ -17,6 +17,7 @@ if st.button('Compute mean/2'):
     mean = 0.0
     counter = 0
     files_number_loaded = glob("*.dat")
+    total_inputs = len(files_number_loaded)
     for my_file in files_number_loaded:
         counter = counter + 1
         with open(my_file, 'r') as current_file:
@@ -27,6 +28,8 @@ if st.button('Compute mean/2'):
             mean = mean + var
     half_mean = mean/(2*counter)
     st.write('result is: ', half_mean)
+    st.write(counter, total_inputs)
+    
     
 
 
