@@ -5,7 +5,7 @@ import uuid
 from glob import glob
 
 # If the user is new --> Generate a username with uuid
-if 'username' not in st.session_state:
+if 'username'+'.dat' not in st.session_state:
     print("This is a new user!")
 #    username = f"user_{np.random.randint(100000000000)}"
     username = uuid.uuid4()
