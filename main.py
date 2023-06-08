@@ -25,7 +25,7 @@ if st.button('Compute mean/2'):
     half_mean = mean/(2*total_inputs)
     st.write('result is: ', half_mean)
 
- if st.button('check state'):
+if st.button('check state'):
     for thing in st.session_state:
         st.write(thing)
     
