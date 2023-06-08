@@ -6,7 +6,7 @@ from glob import glob
 
 
 
-if st.button('Clear Uploaded File(s)') #and 'key' in st.session_state.keys():
+if st.button('Clear Uploaded File(s)'): #and 'key' in st.session_state.keys():
     
     files_number_loaded = glob("*.dat")
     for my_file in files_number_loaded:
