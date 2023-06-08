@@ -15,18 +15,15 @@ if st.button('Clear Uploaded File(s)'): #and 'key' in st.session_state.keys():
         
 if st.button('Compute mean/2'):
     mean = 0.0
-    counter = 0
     files_number_loaded = glob("*.dat")
     total_inputs = len(files_number_loaded)
     for my_file in files_number_loaded:
         counter = counter + 1
         with open(my_file, 'r') as current_file:
             var = current_file.read()          
-#            st.write(type(var))
             var = float(var)
-#            st.write(type(var))
             mean = mean + var
-    half_mean = mean/(2*counter)
+    half_mean = mean/(2*total_inputs)
     st.write('result is: ', half_mean)
     st.write(counter, total_inputs)
     
