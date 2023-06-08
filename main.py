@@ -18,7 +18,6 @@ if st.button('Compute mean/2'):
     files_number_loaded = glob("*.dat")
     total_inputs = len(files_number_loaded)
     for my_file in files_number_loaded:
-        counter = counter + 1
         with open(my_file, 'r') as current_file:
             var = current_file.read()          
             var = float(var)
