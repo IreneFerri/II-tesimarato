@@ -24,7 +24,7 @@ if st.button('Compute mean/2'):
             mean = mean + var
     half_mean = mean/(2*total_inputs)
     st.write('result is: ', half_mean)
-    st.write(counter, total_inputs)
+
     
     
 
