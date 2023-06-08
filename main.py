@@ -1,4 +1,4 @@
 import streamlit as st
-with st.form("my-form", clear_on_submit=True):
-        file = st.file_uploader("upload file")
-        submitted = st.form_submit_button("submit")
+if st.button('Clear Uploaded File(s)') and 'key' in st.session_state.keys():
+    st.session_state.pop('key')
+    st.experimental_rerun()
