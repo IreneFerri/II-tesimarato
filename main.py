@@ -12,5 +12,5 @@ if st.button('Clear Uploaded File(s)') and 'key' in st.session_state.keys():
     
 files_number_loaded = glob("*.dat")
 st.write(f"Files loaded = {files_number_loaded}")
-st.write(st.session_state.key)
+st.write(f"st.session_state.key")
 
