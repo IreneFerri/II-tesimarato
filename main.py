@@ -20,8 +20,11 @@ if st.button('Compute mean/2'):
     for my_file in files_number_loaded:
         counter = counter + 1
         with open(my_file, 'r') as current_file:
-            st.write(type(current_file.read()))
-            mean = mean + float(current_file.read())
+            var = current_file.read()          
+            st.write(type(var))
+            var = float(var)
+            st.write(type(var))
+            mean = mean + var
     half_mean = mean/(2*counter)
     st.write('result is: ', half_mean)
     
