@@ -22,6 +22,7 @@ else:
 
 
 if os.path.exists(f"{username}.dat"):
+    filename = f"{username}.dat"
     with open(filename, "r" ) as f:
         user_number = int(f.readlines()[0])
         print(user_number)
