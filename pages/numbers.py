@@ -33,13 +33,13 @@ if os.path.exists(f"{username}.dat"):
 else:
 
     user_number = st.slider('Selecciona un nombre', 1, 100)
-    st.write('El nombre seleccionat es ', user_number)
-    st.write("El teu nom d'usuari es  ", username)
+    st.write('El nombre seleccionat és ', user_number)
+    st.write("El teu nom d'usuari és  ", username)
     filename = f"{username}.dat"
 
-    if st.button('submit'):
-        st.write('Number submitted')
+    if st.button('Envia!'):
+        st.write('Nombre enviat')
         with open(filename, "w" ) as f:
-            print("the user number is ", user_number, "user", username)
+            print("El nombre enviat és ", user_number, "usuari", username)
             f.write(str(user_number))
         st.experimental_rerun()
