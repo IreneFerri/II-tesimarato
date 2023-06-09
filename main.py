@@ -32,6 +32,7 @@ if st.button('Meitat de la mitjana'):
             mean = mean + var
             var_array[counter] = var            
             counter = counter + 1
+            st.write("L'USUARI    " , my_file, '    ha enviat el nombre ', var)
     half_mean = mean/(2*total_inputs)
     winner = find_nearest(var_array, half_mean, files_number_loaded)
     st.write('LA MEITAT DE LA MITJANA ES: ', half_mean)
