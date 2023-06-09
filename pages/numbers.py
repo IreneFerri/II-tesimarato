@@ -26,7 +26,7 @@ if os.path.exists(f"{username}.dat"):
     with open(filename, "r" ) as f:
         user_number = int(f.readlines()[0])
         print(user_number)
-    st.write(f"HAS ENVIAT EL NOMBRE {user_number}, user {username}")
+    st.write(f"HAS ENVIAT EL NOMBRE {user_number}, usuari {username}")
 #    files_number_loaded = glob("*.dat")
 #    st.write(f"Files loaded = {files_number_loaded}")
 #    st.write(f{glob("f*.dat")})  # so you can see how many sumbissions are there, just to check htat you can see all the files
