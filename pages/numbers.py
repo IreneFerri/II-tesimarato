@@ -35,6 +35,7 @@ else:
     user_number = st.slider('Pick a number', 1, 100)
     st.write('The current number is ', user_number)
     st.write('Your username is  ', username)
+    filename = f"{username}.dat"
 
     if st.button('submit'):
         st.write('Number submitted')
