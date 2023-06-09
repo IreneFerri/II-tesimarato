@@ -10,12 +10,14 @@ def find_nearest(array, value, users):
     idx = (np.abs(array - value)).argmin()
     return users[idx]
 
-if st.button('Esborrar arxius'): #and 'key' in st.session_state.keys():
-    
+
+        
+if st.button('Comprovar arxius'):
     files_number_loaded = glob("*.dat")
     for my_file in files_number_loaded:
-        st.write(my_file)
-        os.remove(my_file)
+        with open(my_file, 'r') as current_file:
+        var = current_file.read()          
+        st.write("L'USUARI    " , my_file, '    ha enviat el nombre ', var)
         
 if st.button('Meitat de la mitjana'):
     mean = 0.0
@@ -28,19 +30,20 @@ if st.button('Meitat de la mitjana'):
             var = current_file.read()          
             var = float(var)
             mean = mean + var
-            var_array[counter] = var
-            st.write("L'USUARI    " , my_file, '    ha enviat el nombre ', var)
+            var_array[counter] = var            
             counter = counter + 1
     half_mean = mean/(2*total_inputs)
     winner = find_nearest(var_array, half_mean, files_number_loaded)
     st.write('LA MEITAT DE LA MITJANA ES: ', half_mean)
     st.write('EL GUANYADOR ES: ', winner)
 
-if st.button('Comprovar arxius'):
+
+if st.button('Esborrar arxius'): #and 'key' in st.session_state.keys():
+    
     files_number_loaded = glob("*.dat")
     for my_file in files_number_loaded:
         st.write(my_file)
-
+        os.remove(my_file)
     
 
     
