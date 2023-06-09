@@ -22,6 +22,7 @@ if st.button('Compute mean/2'):
             var = current_file.read()          
             var = float(var)
             mean = mean + var
+            st.write('user ', current_file, ' ha enviat el nombre ', var)
     half_mean = mean/(2*total_inputs)
     st.write('result is: ', half_mean)
 
