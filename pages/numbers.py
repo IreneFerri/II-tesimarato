@@ -6,36 +6,17 @@ import numpy as np
 import uuid
 from glob import glob
 
-import extra_streamlit_components as stx
 
 print("The app is starting...")
 
-# fuunction to manage cookies
-@st.cache(allow_output_mutation=True)
-def get_manager():
-    return stx.CookieManager()
-
-cookie_manager = get_manager()
-cookies = cookie_manager.get_all()
-print("\n All coockies:")
-print(cookies)
-print("-------------\n")
 
 # If the user is new --> Generate a username with uuid
 if 'username' not in st.session_state:
-    user_cookie = cookie_manager.get(cookie="username")
-    print("user_cookie", user_cookie)
-    if user_cookie is not None:
-        username = user_cookie
-        st.session_state['username'] = username
-        print("username from cookie", username)
-    else:
-        st.write("USUARI NOU!")
-    #    username = f"user_{np.random.randint(100000000000)}"
-        username = uuid.uuid4()
-        print(username)
-        st.session_state['username'] = username
-        cookie_manager.set("username",str(username), expires_at=datetime.datetime(year=2032, month=2, day=2))
+    st.write("USUARI NOU!")
+#    username = f"user_{np.random.randint(100000000000)}"
+    username = uuid.uuid4()
+    print(username)
+    st.session_state['username'] = username
 else:
     print("Ja has enviat un nombre!")
     username = st.session_state['username']
@@ -57,7 +38,6 @@ if os.path.exists(filename):
             else:
                 st.write("El guanyador és", winner_file_dat)
 
-            cookie_manager.delete(cookie="username")
     else:
         with open(filename, "r" ) as f:
             user_number = int(f.readlines()[0])
