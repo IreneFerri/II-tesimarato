@@ -16,8 +16,8 @@ if st.button('Comprovar arxius'):
     files_number_loaded = glob("*.dat")
     for my_file in files_number_loaded:
         with open(my_file, 'r') as current_file:
-        var = current_file.read()          
-        st.write("L'USUARI    " , my_file, '    ha enviat el nombre ', var)
+            var = current_file.read()          
+            st.write("L'USUARI    " , my_file, '    ha enviat el nombre ', var)
         
 if st.button('Meitat de la mitjana'):
     mean = 0.0
