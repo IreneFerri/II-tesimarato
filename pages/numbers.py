@@ -4,17 +4,6 @@ import numpy as np
 import uuid
 from glob import glob
 
-st.set_page_config(layout="wide")
-
-st.markdown("""
-<style>
-.big-font {
-    font-size:300px !important;
-}
-</style>
-""", unsafe_allow_html=True)
-
-st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
 
 # If the user is new --> Generate a username with uuid
 if 'username' not in st.session_state:
@@ -23,11 +12,12 @@ if 'username' not in st.session_state:
     username = uuid.uuid4()
     print(username)
     st.session_state['username'] = username
+    filename = f"{username}.dat"
 else:
     print("I already know you!")
     username = st.session_state['username']
 
-filename = f"{username}.dat"
+
 
 
 
