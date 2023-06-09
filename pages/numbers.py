@@ -14,7 +14,7 @@ if 'username' not in st.session_state:
     st.session_state['username'] = username
     filename = f"{username}.dat"
 else:
-    print("I already know you!")
+    print("Ja has enviat un nombre!")
     username = st.session_state['username']
 
 
