@@ -6,14 +6,14 @@ from glob import glob
 
 
 
-if st.button('Clear Uploaded File(s)'): #and 'key' in st.session_state.keys():
+if st.button('Esborrar arxius'): #and 'key' in st.session_state.keys():
     
     files_number_loaded = glob("*.dat")
     for my_file in files_number_loaded:
         st.write(my_file)
         os.remove(my_file)
         
-if st.button('Compute mean/2'):
+if st.button('Meitat de la mitjana'):
     mean = 0.0
     files_number_loaded = glob("*.dat")
     total_inputs = len(files_number_loaded)
@@ -26,9 +26,13 @@ if st.button('Compute mean/2'):
     half_mean = mean/(2*total_inputs)
     st.write('LA MEITAT DE LA MITJANA ES: ', half_mean)
 
-if st.button('check state'):
-    for thing in st.session_state:
-        st.write(thing)
+if st.button('Comprovar arxius'):
+    files_number_loaded = glob("*.dat")
+    for my_file in files_number_loaded:
+        st.write(my_file)
+
+    
+
     
 
 
