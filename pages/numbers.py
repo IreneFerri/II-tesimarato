@@ -33,8 +33,8 @@ if os.path.exists(f"{username}.dat"):
 else:
 
     user_number = st.slider('Pick a number', 1, 100)
-    st.write('The current number is ', user_number)
-    st.write('Your username is  ', username)
+    st.write('El nombre seleccionat es ', user_number)
+    st.write("El teu nom d'usuari es  ", username)
     filename = f"{username}.dat"
 
     if st.button('submit'):
