@@ -38,6 +38,10 @@ if st.button('Meitat de la mitjana'):
     st.write('LA MEITAT DE LA MITJANA ES: ', half_mean)
     st.write('EL GUANYADOR ES: ', winner)
 
+    with open("winner_file.dat", "w") as f:
+        f.write(winner)
+
+
 
 if st.button('Esborrar arxius'): #and 'key' in st.session_state.keys():
     
