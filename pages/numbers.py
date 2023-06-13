@@ -46,7 +46,7 @@ if os.path.exists(filename):
 
         # wait 10 seconds
 
-        time.sleep(300)
+        time.sleep(10)
         # reload the page after 10 seconds
         st.experimental_rerun()
 
